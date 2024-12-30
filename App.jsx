@@ -1,14 +1,17 @@
 import React from 'react'
-import {Text,View,Button}from 'react-native'
-import First from './src/components/First'
+// import {Text,View,Button}from 'react-native'
+// import First from './src/components/First'
+import {View} from 'react-native'
+import JSX from './src/components/JSX'
 
 const App = () => {
   return (
     <View>
-   <Text style={{fontSize:30}}>React native mobile app developer</Text>
+   {/* <Text style={{fontSize:30}}>React native mobile app developer</Text>
    <Text style={{fontSize:30}}>React native mobile app </Text>
    <Button title='Press Here' />
-   <First/>
+   <First/> */}
+   <JSX/>
     </View>
      
     
