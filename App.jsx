@@ -4,7 +4,8 @@ import React from 'react'
 import {View} from 'react-native'
 // import JSX from './src/components/JSX'
 // import OnClick from './src/components/OnClick'
-import UseStateHooks from './src/components/UseStateHooks'
+// import UseStateHooks from './src/components/UseStateHooks'
+import Props from './src/components/Props'
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
    <First/> */}
    {/* <JSX/> */}
     {/* <OnClick/> */}
-    <UseStateHooks/>
+    {/* <UseStateHooks/> */}
+    <Props/>
     </View>
      
     
