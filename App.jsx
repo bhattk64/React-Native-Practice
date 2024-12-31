@@ -3,6 +3,7 @@ import React from 'react'
 // import First from './src/components/First'
 import {View} from 'react-native'
 import JSX from './src/components/JSX'
+import OnClick from './src/components/OnClick'
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
    <Text style={{fontSize:30}}>React native mobile app </Text>
    <Button title='Press Here' />
    <First/> */}
-   <JSX/>
+   {/* <JSX/> */}
+    <OnClick/>
     </View>
      
     
