@@ -2,8 +2,9 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
-import JSX from './src/components/JSX'
-import OnClick from './src/components/OnClick'
+// import JSX from './src/components/JSX'
+// import OnClick from './src/components/OnClick'
+import UseStateHooks from './src/components/UseStateHooks'
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
    <Button title='Press Here' />
    <First/> */}
    {/* <JSX/> */}
-    <OnClick/>
+    {/* <OnClick/> */}
+    <UseStateHooks/>
     </View>
      
     
