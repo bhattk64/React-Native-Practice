@@ -2,8 +2,9 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
+import LoginForm from './src/components/LoginForm'
 // import FlatListScreen from './src/components/FlatListScreen'
-import SectionListScreen from './src/components/SectionListScreen'
+// import SectionListScreen from './src/components/SectionListScreen'
 // import InputText from './src/components/InputText'
 // import Styling from './src/components/Styling'
 // import JSX from './src/components/JSX'
@@ -26,7 +27,8 @@ const App = () => {
     {/* <InputText/> */}
     {/* <Styling/> */}
     {/* <FlatListScreen/> */}
-    <SectionListScreen/>
+    {/* <SectionListScreen/> */}
+    <LoginForm/>
     </View>
      
     
