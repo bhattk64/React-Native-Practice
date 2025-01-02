@@ -2,7 +2,8 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
-import UseEffectHookUpdatingPhase from './src/components/UseEffectHookUpdatingPhase'
+import UseEffectHookUnmountingPhase from './src/components/UseEffectHookUnmountingPhase'
+// import UseEffectHookUpdatingPhase from './src/components/UseEffectHookUpdatingPhase'
 // import UseEffectHook from './src/components/UseEffectHook'
 // import ClassComponenets from './src/components/ClassComponenets'
 // import Grid from './src/components/Grid'
@@ -38,7 +39,8 @@ const App = () => {
     {/* <Grid/> */}
      {/* <ClassComponenets/> */}
      {/* <UseEffectHook/> */}
-     <UseEffectHookUpdatingPhase/>
+     {/* <UseEffectHookUpdatingPhase/> */}
+     <UseEffectHookUnmountingPhase/>
     </View>
      
     
