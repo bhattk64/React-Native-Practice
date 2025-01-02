@@ -2,7 +2,8 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
-import Grid from './src/components/Grid'
+import ClassComponenets from './src/components/ClassComponenets'
+// import Grid from './src/components/Grid'
 // import LoginForm from './src/components/LoginForm'
 // import ContactListScreen from './src/screens/Contact/ContactListScreen'
 // import FlatListScreen from './src/components/FlatListScreen'
@@ -32,7 +33,8 @@ const App = () => {
     {/* <SectionListScreen/> */}
     {/* <LoginForm/> */}
     {/* <ContactListScreen/> */}
-    <Grid/>
+    {/* <Grid/> */}
+     <ClassComponenets/>
     </View>
      
     
