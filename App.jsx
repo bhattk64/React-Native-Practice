@@ -2,7 +2,8 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
-import UseEffectHook from './src/components/UseEffectHook'
+import UseEffectHookUpdatingPhase from './src/components/UseEffectHookUpdatingPhase'
+// import UseEffectHook from './src/components/UseEffectHook'
 // import ClassComponenets from './src/components/ClassComponenets'
 // import Grid from './src/components/Grid'
 // import LoginForm from './src/components/LoginForm'
@@ -36,7 +37,8 @@ const App = () => {
     {/* <ContactListScreen/> */}
     {/* <Grid/> */}
      {/* <ClassComponenets/> */}
-     <UseEffectHook/>
+     {/* <UseEffectHook/> */}
+     <UseEffectHookUpdatingPhase/>
     </View>
      
     
