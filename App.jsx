@@ -2,7 +2,8 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
-import Loader from './src/components/Loader'
+import PreesableComponents from './src/components/PreesableComponents'
+// import Loader from './src/components/Loader'
 // import StyleWithButton from './src/components/StyleWithButton'
 // import HideShowToggle from './src/components/HideShowToggle'
 // import UseEffectHookUnmountingPhase from './src/components/UseEffectHookUnmountingPhase'
@@ -46,7 +47,8 @@ const App = () => {
      {/* <UseEffectHookUnmountingPhase/> */}
      {/* <HideShowToggle/> */}
      {/* <StyleWithButton/> */}
-     <Loader/>
+     {/* <Loader/> */}
+     <PreesableComponents/>
     </View>
      
     
