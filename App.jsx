@@ -2,7 +2,8 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
-import StatusBarExample from './src/components/StatusBarExample'
+import UseRefHook from './src/components/UseRefHook'
+// import StatusBarExample from './src/components/StatusBarExample'
 // import PreesableComponents from './src/components/PreesableComponents'
 // import Loader from './src/components/Loader'
 // import StyleWithButton from './src/components/StyleWithButton'
@@ -50,7 +51,8 @@ const App = () => {
      {/* <StyleWithButton/> */}
      {/* <Loader/> */}
      {/* <PreesableComponents/> */}
-     <StatusBarExample/>
+     {/* <StatusBarExample/> */}
+     <UseRefHook/>
     </View>
      
     
