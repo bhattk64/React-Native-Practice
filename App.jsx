@@ -2,7 +2,8 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
-import UseRefHook from './src/components/UseRefHook'
+import ModalDialougeBox from './src/components/ModalDialougeBox'
+// import UseRefHook from './src/components/UseRefHook'
 // import StatusBarExample from './src/components/StatusBarExample'
 // import PreesableComponents from './src/components/PreesableComponents'
 // import Loader from './src/components/Loader'
@@ -52,7 +53,8 @@ const App = () => {
      {/* <Loader/> */}
      {/* <PreesableComponents/> */}
      {/* <StatusBarExample/> */}
-     <UseRefHook/>
+     {/* <UseRefHook/> */}
+     <ModalDialougeBox/>
     </View>
      
     
