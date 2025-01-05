@@ -2,7 +2,8 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
-import AlertExample from './src/components/AlertExample'
+// import AlertExample from './src/components/AlertExample'
+import GET_API from './src/components/GET_API'
 // import ModalDialougeBox from './src/components/ModalDialougeBox'
 // import UseRefHook from './src/components/UseRefHook'
 // import StatusBarExample from './src/components/StatusBarExample'
@@ -56,7 +57,8 @@ const App = () => {
      {/* <StatusBarExample/> */}
      {/* <UseRefHook/> */}
      {/* <ModalDialougeBox/> */}
-     <AlertExample/>
+     {/* <AlertExample/> */}
+     <GET_API/>
     </View>
      
     
