@@ -2,8 +2,9 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
+import GET_API_LIST from './src/components/GET_API_LIST'
 // import Patch_API from './src/components/Patch_API'
-import Delete_API from './src/components/Delete_API'
+// import Delete_API from './src/components/Delete_API'
 // import Put_API from './src/components/Put_API'
 // import Post_API from './src/components/Post_API'
 // import AlertExample from './src/components/AlertExample'
@@ -66,7 +67,8 @@ const App = () => {
      {/* <Post_API/> */}
      {/* <Put_API/> */}
      {/* <Patch_API/> */}
-     <Delete_API/>
+     {/* <Delete_API/> */}
+     <GET_API_LIST/>
     </View>
      
     
