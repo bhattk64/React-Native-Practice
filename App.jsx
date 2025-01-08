@@ -2,7 +2,8 @@ import React from 'react'
 // import {Text,View,Button}from 'react-native'
 // import First from './src/components/First'
 import {View} from 'react-native'
-import GET_API_LIST from './src/components/GET_API_LIST'
+import PlatformExample from './src/components/PlatformExample'
+// import GET_API_LIST from './src/components/GET_API_LIST'
 // import Patch_API from './src/components/Patch_API'
 // import Delete_API from './src/components/Delete_API'
 // import Put_API from './src/components/Put_API'
@@ -68,7 +69,8 @@ const App = () => {
      {/* <Put_API/> */}
      {/* <Patch_API/> */}
      {/* <Delete_API/> */}
-     <GET_API_LIST/>
+     {/* <GET_API_LIST/> */}
+     <PlatformExample/>
     </View>
      
     
