@@ -84,9 +84,17 @@ import React from 'react'
 import Home from './src/navigations-screens/Home'
 import About from './src/navigations-screens/About'
 import Login from './src/navigations-screens/Login'
-import { StyleSheet } from 'react-native'
+import { Button, StyleSheet } from 'react-native'
+import MyHeader from './src/navigations-screens/MyHeader'
+import Example from './src/navigations-screens/Example'
 
 const Stack=createNativeStackNavigator()
+const say=()=>{
+  Alert.alert('Hello ','Hello Guys')
+}
+// const HeaderTitle=()=> <Button  title='One' color= 'red' onPress={say}/>
+// const HeaderRight=()=><Button title='Two' color='green'  onPress={say}/>
+const  example=()=><Example/>
 const App = () => {
   return (
    <NavigationContainer>
@@ -96,6 +104,16 @@ const App = () => {
   headerTintColor:'#fff',
   contentStyle:styles.screen
 }}>
+  <Stack.Screen name='Header' component={MyHeader }
+  options={{
+    title:'',
+    // headerTitle:()=> <Button  title='One' color= 'red'/>,
+    // headerRight:()=> <Button title='Two' color='green' />
+    // headerTitle:HeaderTitle,
+    // headerRight:HeaderRight 
+    headerTitle:example
+  }}
+  />
   <Stack.Screen name='Login' component={Login}
   // options={{
   //   title:'Login Page',
