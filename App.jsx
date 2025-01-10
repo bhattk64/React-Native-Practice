@@ -84,13 +84,32 @@ import React from 'react'
 import Home from './src/navigations-screens/Home'
 import About from './src/navigations-screens/About'
 import Login from './src/navigations-screens/Login'
+import { StyleSheet } from 'react-native'
 
 const Stack=createNativeStackNavigator()
 const App = () => {
   return (
    <NavigationContainer>
-<Stack.Navigator>
-  <Stack.Screen name='Login' component={Login} />
+<Stack.Navigator screenOptions={{
+  headerStyle:styles.header,
+  headerTitleStyle:styles.headerTitlle,
+  headerTintColor:'#fff',
+  contentStyle:styles.screen
+}}>
+  <Stack.Screen name='Login' component={Login}
+  // options={{
+  //   title:'Login Page',
+  //   headerTintColor:'red',
+  //   headerTitleStyle:{
+  //     color:'blue',
+  //     fontSize:30
+
+  //   },
+  //   headerStyle:{
+  //     backgroundColor:' red'
+  //   },
+  // }}
+  />
     <Stack.Screen name='Home' component={Home} options={{headerShown:false}} />
     <Stack.Screen name='About'component={About} />
 </Stack.Navigator>
@@ -99,3 +118,24 @@ const App = () => {
 }
 
 export default App
+
+
+const styles=StyleSheet.create({
+  header:{
+    backgroundColor:'red',
+    height:50,
+    
+
+  },
+  headerTitlle:{
+    color:'blue',
+    fontSize:30,
+    fontWeight:'bold'
+  },
+  screen:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:'lightgreen'
+  }
+})
