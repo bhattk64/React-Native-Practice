@@ -78,82 +78,157 @@
     
 //   )
 // }
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import React from 'react'
-import Home from './src/navigations-screens/Home'
-import About from './src/navigations-screens/About'
-import Login from './src/navigations-screens/Login'
-import { Button, StyleSheet } from 'react-native'
-import MyHeader from './src/navigations-screens/MyHeader'
-import Example from './src/navigations-screens/Example'
+// import { NavigationContainer } from '@react-navigation/native'
+// import { createNativeStackNavigator } from '@react-navigation/native-stack'
+// import React from 'react'
+// import Home from './src/navigations-screens/Home'
+// import About from './src/navigations-screens/About'
+// import Login from './src/navigations-screens/Login'
+// import { Button, StyleSheet } from 'react-native'
+// import MyHeader from './src/navigations-screens/MyHeader'
+// import Example from './src/navigations-screens/Example'
 
-const Stack=createNativeStackNavigator()
-const say=()=>{
-  Alert.alert('Hello ','Hello Guys')
-}
-// const HeaderTitle=()=> <Button  title='One' color= 'red' onPress={say}/>
-// const HeaderRight=()=><Button title='Two' color='green'  onPress={say}/>
-const  example=()=><Example/>
+// const Stack=createNativeStackNavigator()
+// const say=()=>{
+//   Alert.alert('Hello ','Hello Guys')
+// }
+// // const HeaderTitle=()=> <Button  title='One' color= 'red' onPress={say}/>
+// // const HeaderRight=()=><Button title='Two' color='green'  onPress={say}/>
+// const  example=()=><Example/>
+// const App = () => {
+//   return (
+//    <NavigationContainer>
+// <Stack.Navigator screenOptions={{
+//   headerStyle:styles.header,
+//   headerTitleStyle:styles.headerTitlle,
+//   headerTintColor:'#fff',
+//   contentStyle:styles.screen
+// }}>
+//   <Stack.Screen name='Header' component={MyHeader }
+//   options={{
+//     title:'',
+//     // headerTitle:()=> <Button  title='One' color= 'red'/>,
+//     // headerRight:()=> <Button title='Two' color='green' />
+//     // headerTitle:HeaderTitle,
+//     // headerRight:HeaderRight 
+//     headerTitle:example
+//   }}
+//   />
+//   <Stack.Screen name='Login' component={Login}
+//   // options={{
+//   //   title:'Login Page',
+//   //   headerTintColor:'red',
+//   //   headerTitleStyle:{
+//   //     color:'blue',
+//   //     fontSize:30
+
+//   //   },
+//   //   headerStyle:{
+//   //     backgroundColor:' red'
+//   //   },
+//   // }}
+//   />
+//     <Stack.Screen name='Home' component={Home} options={{headerShown:false}} />
+//     <Stack.Screen name='About'component={About} />
+// </Stack.Navigator>
+//    </NavigationContainer>
+//   )
+// }
+
+// export default App
+
+
+// const styles=StyleSheet.create({
+//   header:{
+//     backgroundColor:'red',
+//     height:50,
+    
+
+//   },
+//   headerTitlle:{
+//     color:'blue',
+//     fontSize:30,
+//     fontWeight:'bold'
+//   },
+//   screen:{
+//     flex:1,
+//     justifyContent:'center',
+//     alignItems:'center',
+//     backgroundColor:'lightgreen'
+//   }
+// })
+import 'react-native-gesture-handler'
+import { View, Text, Button, StyleSheet } from 'react-native'
+import React from 'react'
+import { createDrawerNavigator } from '@react-navigation/drawer'
+import { NavigationContainer } from '@react-navigation/native'
+
+
+const Drawer=createDrawerNavigator() 
+const HomeScreen=({navigation})=>(
+  <View style={styles.screenContainer}>
+    <Text  style={styles.title}>Home Screen</Text>
+    <Button title='Open Drawer' onPress={()=>navigation.openDrawer()} />
+  </View>
+)
+const ProfileScreen=({navigation})=>(
+  <View style={styles.screenContainer}>
+    <Text style={styles.title}>About Screen</Text>
+    <Button title='Open Drawer' onPress={()=>navigation.openDrawer()} />
+
+  </View>
+)
+const SettingScreen=({navigation})=>(
+  <View style={styles.screenContainer}>
+    <Text style={styles.title}>Home Screen</Text>
+    <Button title='Open Drawer' onPress={()=>navigation.openDrawer()} />
+  </View>
+)
 const App = () => {
   return (
-   <NavigationContainer>
-<Stack.Navigator screenOptions={{
-  headerStyle:styles.header,
-  headerTitleStyle:styles.headerTitlle,
-  headerTintColor:'#fff',
-  contentStyle:styles.screen
-}}>
-  <Stack.Screen name='Header' component={MyHeader }
-  options={{
-    title:'',
-    // headerTitle:()=> <Button  title='One' color= 'red'/>,
-    // headerRight:()=> <Button title='Two' color='green' />
-    // headerTitle:HeaderTitle,
-    // headerRight:HeaderRight 
-    headerTitle:example
-  }}
-  />
-  <Stack.Screen name='Login' component={Login}
-  // options={{
-  //   title:'Login Page',
-  //   headerTintColor:'red',
-  //   headerTitleStyle:{
-  //     color:'blue',
-  //     fontSize:30
+    <NavigationContainer>
+      <Drawer.Navigator
+      screenOptions={{
+        drawerStyle:{
+          backgroundColor:'lightblue',
+          width:200
 
-  //   },
-  //   headerStyle:{
-  //     backgroundColor:' red'
-  //   },
-  // }}
-  />
-    <Stack.Screen name='Home' component={Home} options={{headerShown:false}} />
-    <Stack.Screen name='About'component={About} />
-</Stack.Navigator>
-   </NavigationContainer>
+        },
+        drawerLabelStyle:{
+          color:'black',
+          fontSize:20
+        },
+        headerStyle:{
+          backgroundColor:'red'
+
+        },
+        headerTintColor:'#fff',
+        headerTitleAlign:'center'
+      }}
+      
+      >
+        <Drawer.Screen name='Home' component={HomeScreen} />
+        <Drawer.Screen name='Profile' component={ProfileScreen} />
+        <Drawer.Screen name='Settings' component={SettingScreen} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   )
 }
 
 export default App
-
-
 const styles=StyleSheet.create({
-  header:{
-    backgroundColor:'red',
-    height:50,
-    
-
-  },
-  headerTitlle:{
-    color:'blue',
-    fontSize:30,
-    fontWeight:'bold'
-  },
-  screen:{
+  screenContainer:{
     flex:1,
     justifyContent:'center',
     alignItems:'center',
-    backgroundColor:'lightgreen'
-  }
+    backgroundColor:'#f0f0f0'
+
+  },
+  title:{
+    fontSize:30,
+    color:'#333',
+    marginBottom:20,
+    fontWeight:'bold'
+
+  },
 })
