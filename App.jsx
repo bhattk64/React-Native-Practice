@@ -1,13 +1,15 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
 // import AsyncStorageExample from './src/components/AsyncStorageExample'
-import ImageComponentExample from './src/components/ImageComponentExample'
+// import ImageComponentExample from './src/components/ImageComponentExample'
+import Parent from './src/components/Parent'
 
 const App = () => {
   return (
-    <View>
+    <View style={{flex:1}}>
       {/* <AsyncStorageExample/> */}
-      <ImageComponentExample/>
+      {/* <ImageComponentExample/> */}
+      <Parent/>
     </View>
   )
 }

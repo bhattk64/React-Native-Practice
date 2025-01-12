@@ -40,9 +40,7 @@ const styles=StyleSheet.create({
         alignItems:'center',
     },
     content:{
-       
-       
-        padding:4,
+       padding:4,
         backgroundColor:'rgba(255,255,255,0.4)',
         borderRadius:10
     },
