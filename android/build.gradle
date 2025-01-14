@@ -1,21 +1,51 @@
-buildscript {
-    ext {
-        buildToolsVersion = "35.0.0"
-        minSdkVersion = 24
-        compileSdkVersion = 35
-        targetSdkVersion = 34
-        ndkVersion = "26.1.10909125"
-        kotlinVersion = "1.9.24"
+// android {
+//     compileSdkVersion 33  // or 34
+//     defaultConfig {
+//         minSdkVersion 24
+//         targetSdkVersion 34
+//     }
+//     compileOptions {
+//         sourceCompatibility JavaVersion.VERSION_17
+//         targetCompatibility JavaVersion.VERSION_17
+//     }
+//    buildscript {
+//     dependencies {
+//         classpath("com.android.tools.build:gradle:8.0.2") // Ensure compatibility
+//     }
+// }
+
+
+// }
+
+android {
+    compileSdk rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.day1"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
     }
-    repositories {
-        google()
-        mavenCentral()
+
+   
+
+    kotlinOptions {
+        jvmTarget = "17"
     }
-    dependencies {
-        classpath("com.android.tools.build:gradle")
-        classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
-
-apply plugin: "com.facebook.react.rootproject"
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+}

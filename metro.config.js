@@ -1,11 +1,6 @@
-const path = require('path');
-const { getDefaultConfig } = require('metro-config');
+const { getDefaultConfig } = require("metro-config");
+const { withNativeWind } = require('nativewind/metro');
 
-module.exports = {
-  transformer: {
-    babelTransformerPath: require.resolve('react-native-css-transformer'),
-  },
-  resolver: {
-    sourceExts: ['js', 'json', 'ts', 'tsx', 'css'], // Add css if needed
-  },
-};
+const config = getDefaultConfig(__dirname)
+
+module.exports = withNativeWind(config, { input: './global.css' })
