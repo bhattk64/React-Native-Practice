@@ -1,3 +1,7 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">MyReactNativeApp</string>
+=======
+    <string name="app_name">Day1</string>
+>>>>>>> d44f4869841627e1c3254b3785d7d916b20575a1
 </resources>

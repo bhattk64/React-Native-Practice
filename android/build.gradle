@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 buildscript {
     ext {
         buildToolsVersion = "35.0.0"
@@ -20,3 +21,56 @@ buildscript {
 }
 
 apply plugin: "com.facebook.react.rootproject"
+=======
+// android {
+//     compileSdkVersion 33  // or 34
+//     defaultConfig {
+//         minSdkVersion 24
+//         targetSdkVersion 34
+//     }
+//     compileOptions {
+//         sourceCompatibility JavaVersion.VERSION_17
+//         targetCompatibility JavaVersion.VERSION_17
+//     }
+//    buildscript {
+//     dependencies {
+//         classpath("com.android.tools.build:gradle:8.0.2") // Ensure compatibility
+//     }
+// }
+
+
+// }
+
+android {
+    compileSdk rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.day1"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+   
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+}
+>>>>>>> d44f4869841627e1c3254b3785d7d916b20575a1
