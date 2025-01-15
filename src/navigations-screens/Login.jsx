@@ -1,19 +1,18 @@
-import { View, Text, TextInput, Button } from 'react-native'
-import React, { useState } from 'react'
-
+import {View, Text, TextInput, Button} from 'react-native';
+import React, {useState} from 'react';
 
 const Login = ({navigation}) => {
-    const [userName,setUserName]=useState('')
+  const [userName, setUserName] = useState('');
   return (
     <View>
-      <TextInput 
-       placeholder='Enter Username'
-       onChangeText={setUserName}
-      />
+      <TextInput placeholder="Enter Username" onChangeText={setUserName} />
       {/* <Button title='Login' onPress={()=>navigation.navigate('About',{username:'kulchandra'})} /> */}
-      <Button title='Login' onPress={()=>navigation.navigate('About',{userName})} /> 
+      <Button
+        title="Login"
+        onPress={() => navigation.navigate('About', {userName})}
+      />
     </View>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

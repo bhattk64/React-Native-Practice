@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
+
   "name": "MyReactNativeApp",
-  "displayName": "MyReactNativeApp"
-=======
-  "name": "Day1",
-  "displayName": "Day1"
->>>>>>> d44f4869841627e1c3254b3785d7d916b20575a1
-}
+  "displayName": "MyReactNativeApp"}

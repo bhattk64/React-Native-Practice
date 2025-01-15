@@ -1,30 +1,30 @@
-import { View, Text } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import {View, Text} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 
 const GET_API = () => {
-    const[myData,setMyData]=useState([])
-   useEffect(()=>{
-//    fetch('http://10.0.2.2:3000/users').then((response)=>{
-//    response.json().then((result)=>{
-//     console.log(result)
-//    })
-//    })
-axios.get('http://10.0.2.2:3000/users').then((result)=>{
-    // console.log(result.data)
-    setMyData(result.data)
-})
-    },[])
+  const [myData, setMyData] = useState([]);
+  useEffect(() => {
+    //    fetch('http://10.0.2.2:3000/users').then((response)=>{
+    //    response.json().then((result)=>{
+    //     console.log(result)
+    //    })
+    //    })
+    axios.get('http://10.0.2.2:3000/users').then(result => {
+      // console.log(result.data)
+      setMyData(result.data);
+    });
+  }, []);
   return (
     <View>
-      <Text style={{fontSize:30,marginBottom:10}}>GET API Methods</Text>
-      {
-        myData.map((item)=>(
-            <Text key={item.id}  style={{fontSize:20,marginBottom:10}}>{item.name}</Text>
-        ))
-      }
+      <Text style={{fontSize: 30, marginBottom: 10}}>GET API Methods</Text>
+      {myData.map(item => (
+        <Text key={item.id} style={{fontSize: 20, marginBottom: 10}}>
+          {item.name}
+        </Text>
+      ))}
     </View>
-  )
-}
+  );
+};
 
-export default GET_API
+export default GET_API;

@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
     "java.compile.nullAnalysis.mode": "automatic",
-=======
->>>>>>> d44f4869841627e1c3254b3785d7d916b20575a1
     "java.configuration.updateBuildConfiguration": "automatic"
 }

@@ -1,13 +1,13 @@
-import { View } from 'react-native'
-import React from 'react'
-import SubChild from './SubChild'
+import {View} from 'react-native';
+import React from 'react';
+import SubChild from './SubChild';
 
 const FirstChild = () => {
   return (
     <View>
-     <SubChild  />
+      <SubChild />
     </View>
-  )
-}
+  );
+};
 
-export default FirstChild
+export default FirstChild;

@@ -1,10 +1,8 @@
 // import { SafeAreaView } from 'react-native'
-import React from 'react'
+import React from 'react';
 // import MyLogin from './src/components/MyLogin'
-import AnimatedCardFlip from './src/components/AnimatedCardFlip'
-import './global.css'
-
-
+import AnimatedCardFlip from './src/components/AnimatedCardFlip';
+import './global.css';
 
 // import AsyncStorageExample from './src/components/AsyncStorageExample'
 // import ImageComponentExample from './src/components/ImageComponentExample'
@@ -15,27 +13,23 @@ import './global.css'
 // import One from './src/components/One'
 
 const App = () => {
-  
   return (
-    <View style={{flex:1}}>
+    <View style={{flex: 1}}>
       {/* <AsyncStorageExample/> */}
       {/* <ImageComponentExample/> */}
       {/* <Parent/> */}
       {/* <One/> */}
-      <AnimatedCardFlip/>
-     
+      <AnimatedCardFlip />
     </View>
     // <Provider store={store}>
     // <Counter/>
-
 
     // </Provider>
     // <SafeAreaView className='flex-1'>
     //   <MyLogin/>
 
     // </SafeAreaView>
-    
-  )
-}
+  );
+};
 
-export default App
+export default App;
